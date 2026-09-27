@@ -17,11 +17,12 @@ export default function Home() {
             v1.0.0-PROD
           </span>
         </div>
-        <div className="text-xs font-mono text-gray-500 uppercase tracking-widest flex gap-6 items-center">
-          <Link href="/status" className="hover:text-white transition-colors cursor-pointer flex items-center gap-2">
-            Status: <span className="text-green-500">Online</span>
-          </Link>
+        <div className="text-xs font-mono text-gray-500 uppercase tracking-widest flex gap-4 items-center">
           <span>Workers: <span className="text-blue-500">12/12</span></span>
+          <Link href="/status" className="ml-4 px-3 py-1.5 bg-[#111] hover:bg-[#222] border border-[#333] rounded transition-colors cursor-pointer flex items-center gap-2 text-white normal-case tracking-normal">
+            <span className="w-2 h-2 rounded-full bg-green-500"></span>
+            System Status
+          </Link>
         </div>
       </header>
 

@@ -1,0 +1,57 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    # Frontend (Next.js)
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+    - name: Build Frontend
+      run: |
+        cd frontend
+        npm ci
+        npm run build
+
+    # API Gateway (NestJS)
+    - name: Build API Gateway
+      run: |
+        cd api-gateway
+        npm ci
+        npm run build
+
+    # Calc Engine (Go)
+    - name: Setup Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'
+    - name: Build Calc Engine
+      run: |
+        cd calc-engine
+        go build -v ./...
+
+    # AI Service (Python)
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Test AI Service
+      run: |
+        cd ai-service
+        pip install fastapi pika
+        python -m py_compile app/services/ai.py
+
+  # docker-build:
+  #  needs: build-and-test
+  #  runs-on: ubuntu-latest
+  #  steps: ... (push to ECR/GCR)

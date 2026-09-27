@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  
+  calculations CalculationHistory[]
+}
+
+model CalculationHistory {
+  id          String   @id @default(uuid())
+  query       String   // The original math expression or natural language
+  result      String   // The computed result
+  steps       String[] // Optional array of step-by-step explanations
+  type        String   // 'standard' or 'ai'
+  
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  
+  createdAt   DateTime @default(now())
+
+  @@index([userId])
+}

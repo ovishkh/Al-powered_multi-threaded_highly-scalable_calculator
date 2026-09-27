@@ -21,7 +21,7 @@
 - **Action Plan**:
   - Implement a rigorous **Grid System**. Panels should be anchored to the edges of the viewport or constrained within a strict max-width dashboard container.
   - Remove excessive border-radius. Change `rounded-3xl` (24px) to `rounded-lg` (8px) or even `rounded-none` for a sharper, more technical appearance.
-  - Introduce an app shell with a clear sidebar or top navigation bar containing branding (OCompEngine).
+  - Introduce an app shell with a clear sidebar or top navigation bar containing branding (OvCompute).
 
 ## 4. Components 🧩
 - **Calculator Keypad**:

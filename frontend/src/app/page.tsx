@@ -11,7 +11,7 @@ export default function Home() {
       <header className="h-14 border-b border-[#222] flex items-center px-6 justify-between shrink-0">
         <div className="flex items-center gap-3">
           <div className="w-4 h-4 rounded-full border-2 border-[#0070F3]"></div>
-          <h1 className="font-bold tracking-tight text-lg">OCompEngine</h1>
+          <h1 className="font-bold tracking-tight text-lg">OvCompute</h1>
           <span className="bg-[#111] border border-[#333] text-xs px-2 py-0.5 rounded text-gray-400 font-mono tracking-widest ml-2">
             v1.0.0-PROD
           </span>
@@ -46,9 +46,6 @@ export default function Home() {
         {/* Right Column: Calculator Engine */}
         <div className="w-full lg:w-[400px] shrink-0 h-full flex flex-col">
           <div className="flex-1 bg-[#0A0A0A] border border-[#222] rounded-md overflow-hidden relative flex flex-col">
-            <div className="h-8 border-b border-[#222] bg-[#111] flex items-center px-4 text-xs font-mono text-gray-500 shrink-0">
-              Compute Node
-            </div>
             <div className="flex-1 p-6 overflow-y-auto flex flex-col items-center justify-center">
               <Calculator />
             </div>

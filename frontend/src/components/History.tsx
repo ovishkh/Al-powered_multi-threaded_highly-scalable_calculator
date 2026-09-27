@@ -11,7 +11,7 @@ export function History() {
       <AnimatePresence>
         {history.length === 0 && !isLoading && (
           <div className="text-[#444] p-2 flex flex-col gap-1">
-            <p>OCompEngine Terminal v1.0</p>
+            <p>OvCompute Terminal v1.0</p>
             <p>Type a command or natural language math query below.</p>
           </div>
         )}

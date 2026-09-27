@@ -5,17 +5,17 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "OCompEngine | AI-Powered Multi-Threaded Calculator",
+  title: "OvCompute | AI-Powered Multi-Threaded Calculator",
   description: "Enterprise-grade mathematical computation platform utilizing multi-threaded operations and AI natural language processing for high-speed arithmetic, matrix operations, and complex calculus.",
-  keywords: ["calculator", "AI calculator", "multi-threaded", "mathematics", "AST", "OCompEngine", "NLP math"],
+  keywords: ["calculator", "AI calculator", "multi-threaded", "mathematics", "AST", "OvCompute", "NLP math"],
   icons: {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "OCompEngine | Advanced Computational Engine",
+    title: "OvCompute | Advanced Computational Engine",
     description: "Solve complex problems with extreme scale and natural language.",
     url: "https://ocompengine.com",
-    siteName: "OCompEngine",
+    siteName: "OvCompute",
     type: "website",
   },
 };

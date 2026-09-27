@@ -1,5 +1,7 @@
 import { create } from 'zustand';
 
+export type CalcMode = 'standard' | 'scientific' | 'programmer' | 'comic' | 'financial';
+
 export interface HistoryItem {
   id: string;
   query: string;
@@ -17,6 +19,8 @@ interface CalcState {
   clearDisplay: () => void;
   deleteLast: () => void;
   calculate: () => void;
+  mode: CalcMode;
+  setMode: (mode: CalcMode) => void;
   calculateAI: (prompt: string) => Promise<void>;
 }
 
@@ -24,6 +28,9 @@ export const useCalcStore = create<CalcState>((set, get) => ({
   displayValue: '',
   history: [],
   isLoading: false,
+  mode: 'standard',
+
+  setMode: (mode) => set({ mode }),
 
   setDisplayValue: (val) => set({ displayValue: val }),
   

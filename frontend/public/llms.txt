@@ -1,6 +1,6 @@
-# OCompEngine - Advanced AI Calculator
+# OvCompute - Advanced AI Calculator
 
-> OCompEngine is a highly scalable, multi-threaded computation engine designed for enterprise mathematics and AI-assisted equation solving.
+> OvCompute is a highly scalable, multi-threaded computation engine designed for enterprise mathematics and AI-assisted equation solving.
 
 ## Key Capabilities
 - **Natural Language Parsing**: Accepts complex algebraic, calculus, and matrix requests in plain English (e.g., "calculate the derivative of x^2 * sin(x)").

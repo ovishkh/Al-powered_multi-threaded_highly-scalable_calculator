@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🚀 OCompEngine: AI-Powered Multi-Threaded Scalable Calculator</h1>
+  <h1>🚀 OvCompute: AI-Powered Multi-Threaded Scalable Calculator</h1>
   <p>An enterprise-grade, highly scalable mathematical computation platform.</p>
 </div>
 
@@ -7,7 +7,7 @@
 
 ## 📖 Overview
 
-OCompEngine bridges the gap between simple calculator apps and heavyweight computational software (like MATLAB or Mathematica). It provides a highly accessible, web-based, AI-driven calculator that can instantly scale to handle massive concurrent computational workloads.
+OvCompute bridges the gap between simple calculator apps and heavyweight computational software (like MATLAB or Mathematica). It provides a highly accessible, web-based, AI-driven calculator that can instantly scale to handle massive concurrent computational workloads.
 
 ## 🏗 Architecture
 
@@ -20,21 +20,41 @@ The platform uses a robust polyglot microservices architecture designed for extr
 - **🛤 Async Message Queue (RabbitMQ):** Message broker managing long-running computational jobs.
 - **💾 Database (PostgreSQL):** Stores user profiles and persistent calculation history via Prisma ORM.
 
-## 🗂 Project Structure & Documentation
+## 🗂 Project Structure
 
-Detailed project planning and specifications are securely managed in our `docs/` directory:
-- [PRD.md](file:///Users/z/Documents/Code/Al-powered_multi-threaded_highly-scalable_calculator/docs/PRD.md): The overarching Product Requirements Document.
-- [IMPLEMENTATION_PLAN.md](file:///Users/z/Documents/Code/Al-powered_multi-threaded_highly-scalable_calculator/docs/IMPLEMENTATION_PLAN.md): Step-by-step checklist and architecture map.
-- [UI_IMPROVEMENT_PLAN.md](file:///Users/z/Documents/Code/Al-powered_multi-threaded_highly-scalable_calculator/docs/UI_IMPROVEMENT_PLAN.md): Technical roadmap for evolving the design system.
+Here is a detailed breakdown of the repository structure and what each folder contains:
 
 ```
 .
 ├── ai-service/        # Python FastAPI microservice for AI NLP
+│   ├── app/           # Core application code (routers, models, services)
+│   ├── venv/          # Python virtual environment
+│   ├── requirements.txt # Python dependencies
+│   └── Dockerfile     # Container definition
 ├── api-gateway/       # Node.js/NestJS entrypoint and SSE streaming
+│   ├── src/           # NestJS source code (controllers, modules, services)
+│   ├── prisma/        # Prisma ORM schema and migrations
+│   ├── test/          # Unit and e2e testing files
+│   ├── package.json   # Node.js dependencies
+│   └── Dockerfile     # Container definition
 ├── calc-engine/       # Go service for raw, parallelized mathematics
+│   ├── cmd/           # Application entrypoints (main.go)
+│   ├── internal/      # Private application and library code
+│   ├── pkg/           # Public library code
+│   ├── go.mod         # Go module dependencies
+│   └── Dockerfile     # Container definition
 ├── frontend/          # Next.js React application
+│   ├── src/           # Next.js app router, components, and utilities
+│   ├── public/        # Static assets
+│   ├── package.json   # Node.js dependencies
+│   └── Dockerfile     # Container definition
 ├── k8s/               # Kubernetes manifests and Auto-scaling configs
-├── docs/              # Core documentation (PRD, Plans)
+│   └── calc-engine-deployment.yaml # Deployment manifest for the calculator engine
+├── docs/              # Core documentation
+│   ├── PRD.md         # Product Requirements Document
+│   ├── IMPLEMENTATION_PLAN.md # Step-by-step checklist and architecture map
+│   ├── UI_IMPROVEMENT_PLAN.md # Technical roadmap for evolving the design system
+│   └── CALCULATOR_MODES_PLAN.md # Planning document for different calculator modes
 └── docker-compose.yml # Local infrastructure (DB, Cache, Queue)
 ```
 

@@ -46,7 +46,6 @@ export const useCalcStore = create<CalcState>((set, get) => ({
 
     try {
       // Very basic local calculation fallback. In reality, this would hit the API gateway.
-      // eslint-disable-next-line no-eval
       const result = eval(displayValue).toString();
       
       const newItem: HistoryItem = {
@@ -60,7 +59,7 @@ export const useCalcStore = create<CalcState>((set, get) => ({
         displayValue: result,
         history: [newItem, ...history]
       });
-    } catch (e) {
+    } catch {
       set({ displayValue: 'Error' });
     }
   },

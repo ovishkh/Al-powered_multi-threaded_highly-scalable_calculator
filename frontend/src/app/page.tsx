@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Calculator } from '@/components/Calculator';
 import { AIPrompt } from '@/components/AIPrompt';
 import { History } from '@/components/History';
@@ -16,9 +17,12 @@ export default function Home() {
             v1.0.0-PROD
           </span>
         </div>
-        <div className="text-xs font-mono text-gray-500 uppercase tracking-widest flex gap-6">
-          <span>Status: <span className="text-green-500">Online</span></span>
+        <div className="text-xs font-mono text-gray-500 uppercase tracking-widest flex gap-4 items-center">
           <span>Workers: <span className="text-blue-500">12/12</span></span>
+          <Link href="/status" className="ml-4 px-3 py-1.5 bg-[#111] hover:bg-[#222] border border-[#333] rounded transition-colors cursor-pointer flex items-center gap-2 text-white normal-case tracking-normal">
+            <span className="w-2 h-2 rounded-full bg-green-500"></span>
+            System Status
+          </Link>
         </div>
       </header>
 
@@ -46,9 +50,7 @@ export default function Home() {
         {/* Right Column: Calculator Engine */}
         <div className="w-full lg:w-[400px] shrink-0 h-full flex flex-col">
           <div className="flex-1 bg-[#0A0A0A] border border-[#222] rounded-md overflow-hidden relative flex flex-col">
-            <div className="flex-1 p-6 overflow-y-auto flex flex-col items-center justify-center">
-              <Calculator />
-            </div>
+            <Calculator />
           </div>
         </div>
 

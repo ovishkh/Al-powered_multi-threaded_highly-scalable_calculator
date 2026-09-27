@@ -17,7 +17,7 @@ export function Calculator() {
     }
 
     if (btn.type === 'num' || btn.type === 'operator') {
-      appendValue(btn.val);
+      if (btn.val) appendValue(btn.val);
     } else if (btn.type === 'action') {
       if (btn.action === 'clear') clearDisplay();
       if (btn.action === 'delete') deleteLast();

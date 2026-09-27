@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Sse, MessageEvent } from '@nestjs/common';
-import { AppService } from './app.service';
+import { AppService } from './app.service.js';
 import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 

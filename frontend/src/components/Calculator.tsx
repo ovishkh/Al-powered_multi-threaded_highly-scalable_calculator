@@ -121,7 +121,7 @@ export function Calculator() {
 
   return (
     <div 
-      className="w-full h-full flex flex-col font-mono absolute inset-0"
+      className="w-full h-full flex flex-col font-mono"
       style={{ fontFamily: mode === 'comic' ? '"Comic Sans MS", "Comic Sans", cursive' : undefined }}
     >
       <div className="h-10 border-b border-[#222] bg-[#111] flex items-center justify-between px-4 shrink-0">

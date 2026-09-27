@@ -21,7 +21,7 @@ export default function Home() {
               Professional UI
             </div>
             <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
-              Nexus Compute
+              OCompEngine
             </h1>
             <p className="text-sm text-gray-400 mt-2 font-medium">Enterprise AI-Powered Calculation Engine</p>
           </div>

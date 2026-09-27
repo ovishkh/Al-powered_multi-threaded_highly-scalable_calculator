@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🚀 Nexus Compute: AI-Powered Multi-Threaded Scalable Calculator</h1>
+  <h1>🚀 OCompEngine: AI-Powered Multi-Threaded Scalable Calculator</h1>
   <p>An enterprise-grade, highly scalable mathematical computation platform.</p>
 </div>
 
@@ -7,7 +7,7 @@
 
 ## 📖 Overview
 
-Nexus Compute bridges the gap between simple calculator apps and heavyweight computational software (like MATLAB or Mathematica). It provides a highly accessible, web-based, AI-driven calculator that can instantly scale to handle massive concurrent computational workloads.
+OCompEngine bridges the gap between simple calculator apps and heavyweight computational software (like MATLAB or Mathematica). It provides a highly accessible, web-based, AI-driven calculator that can instantly scale to handle massive concurrent computational workloads.
 
 ## 🏗 Architecture
 
@@ -20,7 +20,12 @@ The platform uses a robust polyglot microservices architecture designed for extr
 - **🛤 Async Message Queue (RabbitMQ):** Message broker managing long-running computational jobs.
 - **💾 Database (PostgreSQL):** Stores user profiles and persistent calculation history via Prisma ORM.
 
-## 🗂 Project Structure
+## 🗂 Project Structure & Documentation
+
+Detailed project planning and specifications are securely managed in our `docs/` directory:
+- [PRD.md](file:///Users/z/Documents/Code/Al-powered_multi-threaded_highly-scalable_calculator/docs/PRD.md): The overarching Product Requirements Document.
+- [IMPLEMENTATION_PLAN.md](file:///Users/z/Documents/Code/Al-powered_multi-threaded_highly-scalable_calculator/docs/IMPLEMENTATION_PLAN.md): Step-by-step checklist and architecture map.
+- [UI_IMPROVEMENT_PLAN.md](file:///Users/z/Documents/Code/Al-powered_multi-threaded_highly-scalable_calculator/docs/UI_IMPROVEMENT_PLAN.md): Technical roadmap for evolving the design system.
 
 ```
 .
@@ -29,7 +34,7 @@ The platform uses a robust polyglot microservices architecture designed for extr
 ├── calc-engine/       # Go service for raw, parallelized mathematics
 ├── frontend/          # Next.js React application
 ├── k8s/               # Kubernetes manifests and Auto-scaling configs
-├── docs/              # PRD and Implementation Plans
+├── docs/              # Core documentation (PRD, Plans)
 └── docker-compose.yml # Local infrastructure (DB, Cache, Queue)
 ```
 

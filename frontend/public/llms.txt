@@ -1,0 +1,18 @@
+# OCompEngine - Advanced AI Calculator
+
+> OCompEngine is a highly scalable, multi-threaded computation engine designed for enterprise mathematics and AI-assisted equation solving.
+
+## Key Capabilities
+- **Natural Language Parsing**: Accepts complex algebraic, calculus, and matrix requests in plain English (e.g., "calculate the derivative of x^2 * sin(x)").
+- **Step-by-Step Reasoning**: AI returns complete reasoning paths alongside the final AST computation.
+- **Extreme Scale**: The backend utilizes Go (Goroutines) and RabbitMQ to process parallelized matrix operations rapidly.
+- **Server-Sent Events (SSE)**: Asynchronous, real-time streaming of computational results directly to the user interface.
+
+## System Architecture
+- Frontend: Next.js, React, Tailwind CSS, Zustand
+- Backend Gateway: NestJS (Node.js)
+- Compute Engine: Go
+- AI / NLP Engine: Python (FastAPI)
+- Infrastructure: Kubernetes, PostgreSQL, Redis
+
+For integration details, refer to the API endpoints at /api/v1/calculate.
